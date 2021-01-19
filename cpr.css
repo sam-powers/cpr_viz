@@ -1,0 +1,25 @@
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: #fcf5e3;
+    padding: 10px;
+    box-shadow: 1px 1px 1px #cccccc;
+    border-radius: 3px;
+    opacity: 0.9;
+    border-radius: 7.5px;
+    z-index: 1000;
+    top: 55px;
+    
+}
+
+.tooltiptext {
+    color: black;
+}
+
+.text_label {
+ opacity: 0;
+}
+
+svg {
+    overflow: visible;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Prosecution Registry</title>
+    <link rel="stylesheet" href="cpr.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div id="svg_container" class="col-md-9"></div>
+    <div class="row">
+        <div id="amount_change" class="col-md-3"> </div>
+        <div id="crime_change" class="col-md-3"> </div>
+       <div id="country_change" class="col-md-3"> </div>
+
+
+    </div>
+    
+    <script src="js/barInt.js"></script>
+    <script src="js/updateBars.js"></script>
+    <script src="js/drawBar.js"></script>
+    <script src="js/loadData.js"></script>
+    
+    
+     <div id="tooltip" class="tooltip">
+            <span id="tooltiptext" class="tooltiptext"></span>
+        </div>
+
+
+
+</body>
+
+</html>
