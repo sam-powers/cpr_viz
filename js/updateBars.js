@@ -99,7 +99,10 @@ var  summed = d3.nest().key((d) => d.year).rollup(
         .attr("height", function (d) {
             return height - y(d.amount);
         })
-        .attr("class", "bar")
+        .attr("class", "bar")  
+        .on("mouseover", mouseoverbar)
+        .on("mousemove", mousemovebar)
+        .on("mouseleave", mouseleavebar)
         .merge(bars) //Update…
         .transition()
         .duration(500).attr("x", (d) => x(d.year))
@@ -107,7 +110,10 @@ var  summed = d3.nest().key((d) => d.year).rollup(
         .attr("width", x.bandwidth())
         .attr("height", function (d) {
             return height - y(d.amount);
-        });
+        })  
+        .on("mouseover", mouseoverbar)
+        .on("mousemove", mousemovebar)
+        .on("mouseleave", mouseleavebar);;
 
     //Exit…
     bars.exit()

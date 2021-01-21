@@ -62,11 +62,11 @@ var summed = d3.nest().key((d) => d.year).rollup(
         return d.year;
     }).keys();
 
-    var yearLength = d3.max(domainyears) - 1992 + 1;
+    var yearLength = d3.max(domainyears) - 1999 + 1;
 
     x.domain(Array.from({
         length: yearLength
-    }, (x, i) => i + 1992));
+    }, (x, i) => i + 1999));
 
     y.domain([0, d3.max(summed, function (d) {
         return d.amount;
