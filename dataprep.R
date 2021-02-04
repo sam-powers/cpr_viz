@@ -22,7 +22,7 @@ dat %>%
     arrange(COUNTRY) %>%                 # Order the ones with duplicate countries the same way so they will collapse in summary
     summarize(COUNTRY = paste0(COUNTRY, collapse = ", ")) %>% # Paste the non-duplicate multiple country ones back together
   ungroup() %>%
-  arrange(desc(money_type))
+  arrange(COUNTRY, desc(money_type))
 
 str(use_dat)
 
