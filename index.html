@@ -13,25 +13,55 @@
 
 <body>
 
-    <div id="svg_container" class="col-md-9"></div>
-    <div class="row">
-        <div id="amount_change" class="col-md-3"> </div>
-        <div id="crime_change" class="col-md-3"> </div>
-       <div id="country_change" class="col-md-3"> </div>
+    <div class="container-fluid">
+        
+        <h1>Corporate Settlements</h1>
+        <div class="row">
+        <div  class="col-sm-1"> 
+            </div>
 
+        <div id = "label" class="col-sm-9">
+        <span> <b> Amount:</b>  </span> <span id = "amount"> </span> <br>
+            
+            
+        <span> <b>Cases: </b></span> <span id = "cases">    </span> <br>
+        <span> <b>Avg. Settlement: </b></span> <span id = "settle">    </span>
 
+             
+        </div>
+
+        </div>
+        
+        <div class="row">
+
+<!--            <div class="col-md-1"> </div>-->
+            
+            <div id="svg_container" class="col-md-12"></div>
+            
+<!--            <div class="col-md-1"> </div>-->
+
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-md-2"> </div>
+
+            <div id="amount_change" class="col-sm-3"> </div>
+            <div id="crime_change" class="col-sm-3"> </div>
+            <div id="country_change" class="col-sm-3"> </div>
+
+            <div class="col-md-1"> </div>
+
+        </div>
     </div>
+    
+    
     
     <script src="js/barInt.js"></script>
     <script src="js/updateBars.js"></script>
     <script src="js/drawBar.js"></script>
     <script src="js/loadData.js"></script>
     
-    
-     <div id="tooltip" class="tooltip">
-            <span id="tooltiptext" class="tooltiptext"></span>
-        </div>
-
 
 
 </body>

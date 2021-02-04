@@ -6,13 +6,13 @@ var year_key = function (d) {
 
 // set the dimensions and margins of the graph
 var margin = {
-        top: 120,
-        right: 20,
-        bottom: 30,
-        left: 140
+        top: 20,
+        right: 100,
+        bottom: 50,
+        left: 150
     },
     width = 1500 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
 var usewidth = width + margin.left + margin.right;
 var useheight = height + margin.top + margin.bottom;
@@ -20,7 +20,6 @@ var useheight = height + margin.top + margin.bottom;
 
 function drawBar(data) {
 var data_filter = data.filter(g => g.money_type == "Total payment");
-
 
 // data manipulations
 var summed = d3.nest().key((d) => d.year).rollup(
@@ -36,7 +35,9 @@ var summed = d3.nest().key((d) => d.year).rollup(
     summed.forEach(function (d) {
         d.year = d.key;
         d.amount = d.value.sum;
-        d.count = d.value.count
+        d.count = d.value.count;
+        d.avg = d.amount/d.count
+
     });
 
 
@@ -92,10 +93,7 @@ var summed = d3.nest().key((d) => d.year).rollup(
         .on("mousemove", mousemovebar)
         .on("mouseleave", mouseleavebar);
     
-    // Set label up
-    svg.append("text").attr("class", "text_label").text("sample");
     
-
     // add the x Axis
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
